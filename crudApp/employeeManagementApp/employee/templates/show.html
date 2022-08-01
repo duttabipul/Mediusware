@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index-Page</title>
+
+
+</head>
+
+<h1 style="text-align:center">Employee Informations</h1>
+<body style="background-color:#DAA520">
+    <table style="width:80%; margin:0 auto; border:3px solid black; border-spacing:2px;">
+        <colgroup>
+
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+            <col style="background-color:#FAFAD2">
+
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>Zip Code</th>
+                <th>Country</th>
+                <th>Education</th>
+                <th>Joining Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for employee in employees %}
+            <tr>
+                <td>{{employee.empid}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.department}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.dob}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.contactNumber}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.city}}</td>
+                <td>{{employee.zipCode}}</td>
+                <td>{{employee.country}}</td>
+                <td>{{employee.education}}</td>
+                <td>{{employee.joiningDate}}</td>
+                <td>
+                    <a href="edit/{{employee.id}}">Edit</a>
+                    <a href="delete/{{employee.id}}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

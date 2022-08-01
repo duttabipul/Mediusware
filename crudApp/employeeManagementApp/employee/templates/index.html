@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        #div1{
+            padding:2px;
+            width:20%;
+            margin:0 auto;
+            height:40px;
+
+
+
+        }
+        #div2{
+
+            width:20%;
+            margin:0 auto;
+            height:40px;
+
+
+        }
+    </style>
+
+</head>
+
+
+
+<h1 style="text-align:center">Welcome to Employee Register Form</h1>
+<body style="background-color:Aqua">
+
+<form method="POST" action="/employeeAdd">
+
+    {% csrf_token %}
+    <div>
+
+        <div id="div1">
+
+            <label>Employee ID</label>
+
+            <div>
+                <input type="text" placeholder="Employee ID" "{{form.empid}}
+            </div>
+        </div>
+        <div id="div1">
+            <label>Employee Name</label>
+            <div>
+                <input type="text" placeholder="John" "{{form.name}}
+            </div>
+        </div>
+        <div id="div1">
+            <label>Department</label>
+            <div>
+                {{form.department}}
+            </div>
+        </div>
+        <div id="div1">
+
+            <label>Gender</label>
+
+            <div>
+                {{form.gender}}
+            </div>
+        </div>
+        <div id="div1">
+            <label>Date of Birth</label>
+
+            <div>
+                <input type="date" id="birthday" "{{form.dob}}
+            </div>
+        </div>
+        <div id="div1">
+            <label>Email</label>
+            <div>
+                <input type="text" placeholder="john@gmail.com" "{{form.email}}
+            </div>
+        </div>
+        <div id="div1">
+            <label>Contact Number</label>
+            <div>
+                {{form.contactNumber}}
+            </div>
+
+        </div>
+        <div id="div2">
+            <label>Salary</label>
+            <div>
+                {{form.salary}}
+            </div>
+        </div>
+        <div id="div2">
+            <label>City</label>
+            <div>
+                {{form.city}}
+            </div>
+        </div>
+        <div id="div2">
+            <label>Zip Code</label>
+            <div>
+                <input type="text" placeholder="1100" "{{form.zipCode}}
+            </div>
+        </div>
+        <div id="div2">
+            <label>Country</label>
+            <div>
+                {{form.country}}
+            </div>
+        </div>
+        <div id="div2">
+            <label>Education</label>
+            <div>
+                <input type="text" placeholder="Dip/BSc/MSc" "{{form.education}}
+            </div>
+        </div>
+        <div id="div2">
+            <label>Joining Date</label>
+            <div>
+                <input type="date" id="joining" "{{form.joiningDate}}
+            </div>
+        </div>
+        <div id="div2">
+            <button type="submit">Submit</button><br>
+        </div>
+    </div>
+</form>
+<div id="div2">
+<a id="div2" href="show">Click Here to see the Result</a>
+</div>
+</body>
+</html>

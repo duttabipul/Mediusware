@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update-Page</title>
+</head>
+<h1>Edit the informations</h1>
+<body style="background-color:#F0E68C">
+
+<form method="POST" action="/update/{{employee.id}}">
+
+    {% csrf_token %}
+    <div>
+        <div>
+            <label>Employee ID</label>
+            <div>
+                <input type="text" name="empid" value="{{employee.empid}}">
+            </div>
+            <label>Name</label>
+            <div>
+                <input type="text" name="name" value="{{employee.name}}">
+            </div>
+            <label>Department</label>
+            <div>
+                <input type="text" name="department" value="{{employee.department}}">
+            </div>
+
+            <label>Gender</label>
+            <div>
+                <input type="text" name="gender" value="{{employee.gender}}">
+            </div>
+            <label>Date of Birth</label>
+            <div>
+                <input type="text" name="dob" value="{{employee.dob}}">
+            </div>
+            <label>Email</label>
+            <div>
+                <input type="text" name="email" value="{{employee.email}}">
+            </div>
+            <label>Contact Number</label>
+            <div>
+                <input type="text" name="contactNumber" value="{{employee.contactNumber}}">
+            </div>
+            <label>Salary</label>
+            <div>
+                <input type="text" name="salary" value="{{employee.salary}}">
+            </div>
+            <label>City</label>
+            <div>
+                <input type="text" name="city" value="{{employee.city}}">
+            </div>
+            <label>Zip Code</label>
+            <div>
+                <input type="text" name="zipCode" value="{{employee.zipCode}}">
+            </div>
+            <label>Country</label>
+            <div>
+                <input type="text" name="country" value="{{employee.country}}">
+            </div>
+            <label>Education</label>
+            <div>
+                <input type="text" name="education" value="{{employee.education}}">
+            </div>
+            <label>Joining Date</label>
+            <div>
+                <input type="text" name="joiningDate" value="{{employee.joiningDate}}">
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
